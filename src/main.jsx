@@ -14,7 +14,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import EditContact from "./routes/edit";
+import EditContact, {
+  action as editAction,
+} from "./routes/edit";
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactId/edit",
         element: <EditContact />,
         loader: contactLoader,
+        action: editAction,
       },
     ],
   },
