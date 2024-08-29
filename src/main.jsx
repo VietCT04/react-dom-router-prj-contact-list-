@@ -5,6 +5,7 @@ import ErrorPage from "./error-page.jsx";
 import Index from "./routes/index";
 import Contact, {
   loader as contactLoader,
+  action as contactAction,
 } from "./routes/contact.jsx";
 import { 
   loader as rootLoader,
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactId",
         element: <Contact />,
         loader: contactLoader,
+        action: contactAction,
       },
       {
         path: "contacts/:contactId/edit",
